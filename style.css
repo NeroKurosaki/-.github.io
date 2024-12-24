@@ -1,0 +1,366 @@
+
+    /*?  ФОН */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: url('rabota.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-size: 15px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+      }
+  
+      /*?  Устанавливаем стиль для html и body */
+  html, body {
+      margin: 0; /* Убираем отступы по умолчанию */
+      padding: 0; /* Убираем отступы по умолчанию */
+      overflow-x: hidden; /* Скрываем горизонтальную полосу прокрутки */
+      }
+  
+      /*?  ГЛАВНЫЙ КОНТЕЙНЕР */
+  .container {
+      display: flex; /* Используем Flexbox */
+      flex-direction: column; /* Вертикальное расположение элементов */
+      width: 1000px; /* Ширина слоя */
+      margin: 0 auto; /* Выравнивание по центру */
+      background: #ffffff; /* Цвет фона контейнера */
+      opacity: 0.98; /* Полупрозрачность кнопки */
+      border-radius: 0px; /* Скругление углов */
+      overflow: hidden; /* Скрываем переполнение */
+      margin: 15px auto 0; /* Отступ сверху 20px, выравнивание по центру */
+      }
+  
+      /*?  ЗАГОЛОВОК-ШАПКА */
+  header {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+
+      font-size: 1.5em; /* Размер текста для верхнего заголовка */
+      text-align: center; /* Выравнивание по центру */
+
+      background-color: #333;
+    color: white;
+    padding: 1rem 0;
+      
+      }
+  
+      /*?  ГЛАВНЫЙ КОНТЕЙНЕР С МЕНЮ И СОДЕРЖИМЫМ */
+  .main-content {
+      display: flex; /* Используем Flexbox для основного контента */
+      flex: 1; /* Занимаем оставшееся пространство */
+      }
+  
+  /*?  ВЕРТИКАЛЬНОЕ МЕНЮ */
+  nav {
+      margin-top: 0px; /* Отступ сверху */
+      margin-left: 0px; /* Отступ слева */
+      margin-bottom: 0px; /* Отступ снизу */
+      width: 125px; /* Ширина меню */
+      padding: 1rem 0; /* Внутренние отступы (сверху и снизу 0, слева и справа 10px) */
+      background-color: #333;
+    color: white;
+    
+      background-size: cover; /* Масштабирование фона */
+      background-position: center; /* Центрирование фона */
+      border-radius: 0px; /* Скругление углов */
+  }
+  
+  /*?  СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО ВР МЕНЮ */
+  .dropdown {
+      position: relative; /* Относительное позиционирование для вложенных элементов */
+      cursor: pointer; /* Курсор в виде указателя при наведении */
+  }
+  
+  .dropdown a {
+      color: rgb(255, 255, 255); /* Цвет текста для ссылки "Медиа" */
+  }
+  
+  .dropdown-content {
+      display: none; /* Скрытие выпадающего меню по умолчанию */
+      position: absolute; /* Абсолютное позиционирование для выпадающего меню */
+      top: 100%; /* Положение под родительским элементом */
+      left: 0; /* Выравнивание по левому краю */
+      min-width: 100%; /* Минимальная ширина равная ширине родителя */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Тень для выпадающего меню */
+      z-index: 1; /* Уровень наложения */
+      border-radius: 5px; /* Скругление углов */
+      background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(134, 77, 103, 0.5)), url('background-image.jpg'); /* Фоновый градиент и изображение */
+  }
+  
+  .dropdown-content a {
+      display: block; /* Отображение ссылок как блочных элементов */
+      padding: 10px; /* Внутренние отступы для ссылок */
+      text-decoration: none; /* Удаление подчеркивания */
+      color: rgb(255, 255, 255) !important; /* Принудительный цвет текста для всех ссылок в выпадающем меню */
+      font-weight: normal; /* Нормальная жирность текста */
+  }
+  
+  .dropdown-content a-hover {
+      background-color: rgba(173, 173, 173, 0.446); /* Цвет фона при наведении на ссылку */
+  }
+  
+  .dropdown-hover .dropdown-content {
+      display: block; /* Отображение выпадающего меню при наведении на родительский элемент */
+  }
+  
+  /* Анимация для "Мы чтим УК РФ" */
+  .vertical-menu ul li last-child {
+      transition: margin-top 0.3s ease; /* Плавный переход для изменения отступа */
+      margin-top: 0; /* Исходное положение */
+  }
+  
+  .vertical-menu .dropdown-hover  li last-child {
+      margin-top: 120px; /* Смещение последнего элемента вниз при наведении на выпадающее меню */
+  }
+
+
+      /*?  КОНТЕЙНЕР ДЛЯ РАБОЧЕГО МЕСТА */
+  .content {
+      margin-top: 0%;
+      margin-left: 0%;
+      margin-right: 0%;
+      margin-bottom: 0%;
+      padding: 10px; /* Поля вокруг текста */
+      background: #a3a3a3; /* Цвет фона правой колонки */
+      min-height: 300px; /* Минимальная высота контейнера */
+      flex: 1; /* Занимаем оставшееся пространство */
+      border-radius: 0px; /* Скругление углов */
+      margin-bottom: 0px; /* Отступ снизу */
+      overflow: auto; /* Позволяем прокрутку внутри контейнера, если содержимое превышает высоту */
+      }
+  
+      /*?  ДЛЯ ТЕКСТА НА ГЛАВНОЙ */
+  .special-paragraph {
+      font-size: 20px; /* Увеличивает размер текста */
+      color: rgb(12, 50, 6); /* Меняет цвет текста на синий */
+      text-align: center; /* Выравнивает текст по центру */
+      font-weight: bold; /* Делаем текст жирным */
+      }
+  
+      /*?  ПОДВАЛ */
+  footer {
+      margin-top: 0%;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      background-color: #333;
+    color: white;
+    padding: 1rem 0;
+      clear: both; /* Отменяем действие float */
+      position: relative; /* Устанавливаем относительное позиционирование */
+      border-radius: 0px; /* Скругление углов */
+      }
+  
+      /*?  БОЛЕЕ МЕНЬШИЙ ЗАГОЛОВОК */
+  h2 {
+      color: #85d8ff; /* Цвет текста */
+      margin-top: 0; /* Отступ сверху */
+      text-align: center; /* Центрирование текста на странице */
+      font-size: 30px; /* Увеличивает размер текста */
+      }
+  
+      /*?  ДЛЯ КНОПКИ ВВЕРХ */
+  .scroll-to-top {
+      position: fixed; /* Изменяем на фиксированное позиционирование */
+      bottom: 10px; /* Отступ от нижней границы экрана */
+      right: 2%; /* Отступ от правой границы */
+      background-color: #316c54; /* Цвет фона */
+      color: white; /* Цвет текста */
+      border: none; /* Убираем границу */
+      border-radius: 5px; /* Скругление углов */
+      padding: 5px 10px; /* Отступы внутри кнопки */
+      font-size: 10px; /* Размер шрифта */
+      cursor: pointer; /* Указатель при наведении */
+      transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Плавный переход */
+      opacity: 0.7; /* Полупрозрачность кнопки */
+      }
+  .scroll-to-top:hover {
+      background-color: #ffbe0b; /* Цвет фона при наведении */
+      transform: scale(1.05); /* Увеличение кнопки при наведении */
+      opacity: 1; /* Полная непрозрачность при наведении */
+      }
+  .scroll-to-top:focus {
+      outline: none; /* Убираем обводку при фокусе */
+      }
+  
+      /*?  ДЛЯ МАРКЕРОВ У ССЫЛОК В ГОРИЗОНТАЛЬНОМ МЕНЮ */
+  .horizontal-menu ul {
+      list-style-type: none; /* Убираем стандартные маркеры */
+      padding: 0; /* Убираем отступы */
+      color: rgb(255, 255, 255); /* Цвет текста черный */
+      font-weight: bold; /* Жирный шрифт */
+      transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+      }
+  .horizontal-menu li {
+      color: rgb(255, 255, 255); /* Цвет текста черный */
+      margin-bottom: 3px; /* Увеличиваем расстояние между ссылками */
+      font-weight: bold; /* Жирный шрифт */
+      transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+      }
+  .horizontal-menu li:hover a {
+      text-decoration: none; /* Убираем подчеркивание при наведении */
+      color: rgb(255, 125, 125); /* Изменение цвета текста при наведении */
+      }
+  .horizontal-menu a:visited {
+      color: rgb(255, 255, 255); /* Цвет текста черный для посещенных ссылок */
+      }
+  
+     /*?  ДЛЯ МАРКЕРОВ У ССЫЛОК В ВЕРТИКАЛЬНОМ МЕНЮ */
+  .vertical-menu ul {
+      list-style-type: none; /* Убираем стандартные маркеры */
+      padding: 0; /* Убираем отступы */
+      color: rgb(253, 138, 138); /* Цвет текста черный */
+      font-weight: bold; /* Жирный шрифт */
+      transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+      }
+  .vertical-menu li {
+      position: relative; /* Для позиционирования маркера */
+      padding-left: 12px; /* Отступ для текста от маркера */
+      color: rgb(255, 255, 255); /* Цвет текста черный */
+      margin-bottom: 12px; /* Увеличиваем расстояние между ссылками */
+      font-weight: bold; /* Жирный шрифт */
+      transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+      }
+ 
+  .vertical-menu li:hover::before {
+      color: rgb(255, 169, 169); /* Изменение цвета маркера при наведении */
+      }
+  .vertical-menu li:hover a {
+      padding-left: 10px; /* Сдвигаем текст вправо на 10px при наведении */
+      text-decoration: none; /* Убираем подчеркивание при наведении */
+      color: rgb(255, 132, 132); /* Изменение цвета текста при наведении */
+      }
+  .vertical-menu a:visited {
+      color: rgb(255, 255, 255);
+      }
+
+      /*?  ДЛЯ ВСЕХ ТАБЛИЦ */
+  table {
+      width: 99%; /* Занимает всю ширину контейнера */
+      border-collapse: collapse; /* Убирает двойные границы между ячейками */
+      margin: 2px 0; /* Отступы сверху и снизу */
+      font-family: 'Arial', sans-serif; /* Гарнитура шрифта */
+      }
+  th, td {
+      border: 1px solid #020101; /* Синяя рамка для ячеек */
+      padding: 10px; /* Отступы внутри ячеек */
+      text-align: left; /* Выравнивание текста по левому краю */
+      }
+  th {
+      background-color: #5d92b6; /* Цвет фона заголовков */
+      color: white; /* Цвет текста заголовков */
+      }
+  tr {
+      background-color: #ffffff; /* Светло-серый фон для четных строк */
+      }
+  tr:hover {
+      background-color: #ffffff; /* Цвет фона строки при наведении */
+      }
+  
+      /*?  ДЛЯ ФОРМЫ ЗАКАЗА */
+  .order-form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Центрирование по горизонтали */
+      justify-content: center; /* Центрирование по вертикали */
+      text-align: center; /* Центрирование текста */
+      }
+  input-focus { /* Подсветка элементов формы в фокусе */
+      outline: none; /* Убираем стандартное обрамление */
+      border: 2px solid rgb(0, 123, 255); /* Изменяем цвет рамки на синий */
+      background-color: rgba(0, 123, 255, 0.1); /* Легкий фон при фокусе */ 
+      }
+  .dodin {
+      text-align: center; /* Выравнивание текста по правому краю */
+      font-weight: bold; /* Жирный шрифт */
+      }
+  
+      
+  
+        /*?  ДЛЯ ФОРМЫ ЗАКАЗА */
+      form {
+          border: 2px solid #000000; /* Зеленая рамка для формы */
+          border-radius: 8px; /* Закругленные углы рамки */
+          padding: 20px; /* Отступы внутри формы */
+          background-color: #ffffff; /* Белый фон для формы */
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тень для формы */
+      }
+      body {
+          font-family: Arial, sans-serif;
+        
+          background-color: #ffffff; /* Светлый фон */
+          color: #333; /* Темный текст */
+      }
+      #data-table {
+          width: 100%;
+          border-collapse: collapse;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тень для таблицы */
+          background-color: #ffffff; /* Белый фон для таблицы */
+          border-radius: 0px; /* Закругленные углы таблицы */
+          overflow: hidden; /* Скрытие переполнения для закругленных углов */
+      }
+      #data-table th {
+          padding: 12px;
+          background-color: #747373; /* Синий фон для заголовков */
+          color: rgb(0, 0, 0); /* Белый текст для заголовков */
+          text-align: center; /* Центрирование текста в заголовках */
+          font-size: 16px; /* Размер шрифта заголовков */
+      }
+      #data-table td {
+          padding: 10px;
+          
+          text-align: left; /* Выравнивание текста влево */
+          font-size: 14px; /* Размер шрифта ячеек */
+      }
+      .payment-method {
+          display: flex;
+          flex-direction: column;
+      }
+      .payment-method label {
+          margin-bottom: 5px;
+      }
+      .submit-button {
+          background-color: #d69797; 
+          color: rgb(0, 0, 0); /* Белый текст */
+          padding: 5px 10px; /* Уменьшенные отступы */
+          border: none; /* Без рамки */
+          border-radius: 0px; /* Закругленные углы */
+          cursor: pointer; /* Указатель при наведении */
+          font-size: 14px; /* Уменьшенный размер шрифта */
+          transition: background-color 0.3s; /* Плавный переход цвета */
+      }
+      .submit-button:hover {
+          background-color: #ffffff; /* Темнее при наведении */
+      }
+  
+      /*?  ДЛЯ ТРЕХ ТАБЛИЦ */
+      .department-table {
+          width: 90%;
+          border-collapse: collapse;
+          margin: 20px 0;
+          box-shadow: 0 2px 10px rgb(0, 0, 0);
+          border-radius: 0px; /* Закругление углов таблицы */
+          overflow: hidden; /* Скрытие переполнения для закругленных углов */
+          margin-left: 5%;
+          margin-top: -1%;
+      }
+      
+      .department-table th, .department-table td {
+          padding: 12px;
+          text-align: center; /* Центровка текста в заголовках и ячейках */
+          border: 1px solid #ddd;
+      }
+      
+      .department-table th {
+          background-color: #ff9898;
+          color: rgb(0, 0, 0);
+      }
+      
+      .department-table td {
+          font-weight: bold; /* Жирный шрифт для данных */
+      }
+      
+  
